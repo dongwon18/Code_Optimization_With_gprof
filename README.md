@@ -25,9 +25,24 @@ tags:
   4. optimization 3
     - focus on reducing the number of count_variety calls
     - result: save the return value of count_variety to a variable 'stock_variety' and pass it to functions
-  5.  
+  5. optimization 4
+    - focus on reducing redundant variable declaration and initialization in loop, also focus on row major order in array
+    - result: declare variable outside the loop, no column major order found
+  6. optimization 5
+    - done with meaningless large data to find out other part to optimize since original data was too small to get proper result on the behalf of running time.
+    - focus on data_selection() function which contains redundant repeated work
+    - result: modify code not to repeat the same work (total repeated time $$line<sup>2$$ → $$line$$)
+  7. optimization 6
+    - focus on assembly code and loop unrolling
+    - result: optimization done
+  
 ## Contents of Document
-
+1. Introduction
+  - Brief explanation about the program to be simulated
+2. How to use original stock simulation program
+3. Optimization
+4. Conclusion
+5. References
 ## Result
 
 ## How to run
