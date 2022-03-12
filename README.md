@@ -44,10 +44,31 @@ tags:
 4. Conclusion
 5. References
 ## Result
-
-## How to run
+Total 6 optimization steps are done. 
+Detailed result is included in the document.
 
 ## File structure
+```
+|-- data
+  |-- all_month_data.csv
+  |-- all_stock_data.csv
+|-- src
+  |-- optimized_source_code.c
+  |-- original_code.c
+|-- code_optimization_document.pdf
+```
 
 ## 배운 점
+- 코드의 실행시간에 있어 가장 영향을 많이 미치는 부분이 loop 부분임을 인지하고 아래의 방법을 통해 loop efficiency를 증가시킬 수 있다.
+  - loop 내에서 중복적으로 call 되는 고정 값을 외부에서 전달해주거나 loop 바깥에서 정의함으로써 불필요한 function call을 줄일 수 있다.
+  - 값이 변경되지 않는 값은 loop 바깥에서 정의하여 loop inefficiency를 줄일 수 있었다.
+  - 불필요한 loop를 찾아 제거함으로써 실행 시간을 줄일 수 있었다.
+- 2x2 unrolling은 하드웨어 적인 차이기 때문에 SW의 측면에서 효율성에 차이를 미치지는 않는다.
 ## 한계점
+- 1년 전에 작성했던 코드를 분석하고 최적화하는 과정에서 이전에 작성한 코드에 주석이 많음에도 불구하고 **소스 파일을 나눠 관리**하는 것이 가독성이좋다는 것을 깨닫게 되었다.
+- 최적화한 코드 자체가 비교적 단순하다보니 하드웨어적인 최적화를 진행하였을 때 차이가 극명하게 보이지 않아 차후 기회가 있다면 복잡한 코드를 최적화하는 것일 좋을 듯 하다.
+- 불필요한 변수, 함수 등을 정리하고 가독성을 높이는 refactoring 기법을 도입하면 더욱 좋을 것이다.  
+  
+  
+  
+  
